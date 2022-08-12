@@ -19,9 +19,12 @@ public class CD {
 	}
 
 
-	public String getDetails()
-	{
-		return "CD ID: "+cdId+" CD Name: "+cdName+" CD Price Is: "+cdPrice;
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		 	return "CD ID: "+cdId+" CD Name: "+cdName+" CD Price Is: "+cdPrice;
+	
+	
 	}
 
 }

@@ -11,9 +11,13 @@ public class InternationalCD extends CD{
 		
 	}
 	
-	@Override
-	public String getDetails() {
-	return super.getDetails()+" Language IS: "+language;
+	
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+		return super.toString()+" Language IS: "+language;
+} {
+	
 	}
 	
 

@@ -10,9 +10,12 @@ public class SpecialEditionCD extends CD{
 	}
 	
 	@Override
-	public String getDetails() {
+	public String toString() {
 		// TODO Auto-generated method stub
-		return super.getDetails()+" Special Feature is: "+specialFeature;
+		return super.toString()+" Special Feature is: "+specialFeature;
+	}
+		// TODO Auto-generated method stub
+		
 	}
 
-}
+
