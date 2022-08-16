@@ -43,7 +43,7 @@ public class App {
 		superMan.takeOff();
 		superMan.fly();
 		superMan.land();
-		System.out.println(superMan.getDetails());
+		
 		
 
 	}

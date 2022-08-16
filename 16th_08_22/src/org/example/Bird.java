@@ -1,6 +1,6 @@
 package org.example;
 
-public class Bird extends Flyer{
+public class Bird extends  Data implements Flyer,MyInterface{
 
 	@Override
 	public void fly() {
@@ -18,6 +18,12 @@ public class Bird extends Flyer{
 	public void land() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String displayDetails() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
