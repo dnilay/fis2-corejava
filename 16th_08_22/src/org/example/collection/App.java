@@ -1,5 +1,12 @@
 package org.example.collection;
 
+import java.util.Comparator;
+import java.util.Set;
+import java.util.TreeSet;
+
+import org.example.collection.model.Employee;
+import org.example.collection.model.SalaryComparator;
+
 public class App {
 
 	public static void main(String[] args) {
@@ -31,7 +38,28 @@ public class App {
 		 * Set<Integer> set1= map.keySet(); System.out.println(set1);
 		 * set1.forEach(System.out::println); Set<Entry<Integer, String>> set2=
 		 * map.entrySet(); System.out.println(set2); set2.forEach(System.out::println);
+		 * 
+		 * 
 		 */
+		
+		Set<Integer> s=new TreeSet<Integer>();
+		s.add(10);
+		s.add(1);
+		s.add(19);
+		s.add(-8);
+		
+		s.forEach(System.out::println);
+		
+		Comparator<Employee> comparator=new SalaryComparator();
+		Set<Employee> employees=new TreeSet<Employee>(comparator);
+	
+		employees.add(new Employee(1, "John",10000));
+		employees.add(new Employee(2, "Sourav", 9000));
+		employees.add(new Employee(3, "Marry", 19000));
+		employees.add(new Employee(4, "Rahul", 40000));
+		
+		employees.forEach(System.out::println);
+		
 	}
 
 }

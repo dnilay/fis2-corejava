@@ -8,5 +8,7 @@ public interface CustomerFactory {
 
 	void createCustomer(Customer customer);
 	Collection<Customer> getAllCustomers();
+	Customer findByCustomerId(Integer customerId);
+	
 
 }
