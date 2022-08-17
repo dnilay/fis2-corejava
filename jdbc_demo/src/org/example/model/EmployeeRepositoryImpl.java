@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,7 +27,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
 	@Override
 	public void createEmployee(Employee employee) throws SQLException {
 		
-		
+		PreparedStatement preparedStatement=connection.prepareStatement("insert into employee(employee_id,employee_name,salary) values(?,?,?)");
+		preparedStatement.setInt(1, employee.getEmployeeId());
+		preparedStatement.setString(2, employee.getEmployeeName());
+		preparedStatement.setDouble(3, employee.getSalary());
+		int result= preparedStatement.executeUpdate();
+		System.out.println(result+" row(s) upadted...");
 		
 		
 	}

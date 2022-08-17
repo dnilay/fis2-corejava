@@ -13,6 +13,7 @@ public class App {
 
 		EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
 		try {
+			employeeRepository.createEmployee(new Employee(3, "Sachin", 20000));
 			List<Employee> list = employeeRepository.getAllemployees();
 			list.forEach(System.out::println);
 		} catch (SQLException e) {
